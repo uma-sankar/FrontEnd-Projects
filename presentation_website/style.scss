@@ -1,0 +1,146 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+$page-1-color:steelblue;
+$page-2-color:tan;
+$page-3-color:teal;
+$page-4-color:slateblue;
+$animation-time:1.5s;
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif; }
+
+#page1 {
+  background-color: $page-1-color; }
+
+#page2 {
+  background-color: $page-2-color; }
+
+#page3 {
+  background-color: $page-3-color; }
+
+#page4 {
+  background-color: $page-4-color; }
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; 
+        
+          h1 {
+            font-size: 3.5rem;
+            color: white;
+            line-height: 1.2;
+            margin: 1rem 2rem;
+            text-transform: capitalize; }
+            p {
+              font-size: 1.2rem;
+              color: white;
+              line-height: 1.7;
+              margin: 2rem;
+              text-align: center;
+              padding: 2rem 4rem;
+              -webkit-animation: slide $animation-time ease-in-out forwards;
+                      animation: slide $animation-time ease-in-out forwards; }
+                    } 
+
+.btn {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; 
+
+}
+
+.btn:hover,
+.btn-dark {
+  background-color: #333;
+  color: #f4f4f4; }
+
+.btn-dark:hover {
+  background-color: #f4f4f4;
+  color: #333; }
+
+#page1{
+
+  h1 {
+    -webkit-transform: translateY(-300px);
+        -ms-transform: translateY(-300px);
+            transform: translateY(-300px);
+    -webkit-animation: bounce-down $animation-time ease-in-out forwards;
+            animation: bounce-down $animation-time ease-in-out forwards; 
+  }
+            p {
+              -webkit-transform: translateX(-1500px);
+                  -ms-transform: translateX(-1500px);
+                      transform: translateX(-1500px);
+              -webkit-animation: slide $animation-time ease-in-out forwards;
+                      animation: slide $animation-time ease-in-out forwards;
+              -webkit-animation-delay: 1s;
+                      animation-delay: 1s; }
+  
+                      div a {
+                        -webkit-transform: translateY(300px);
+                            -ms-transform: translateY(300px);
+                                transform: translateY(300px);
+                        -webkit-animation: bounce-up $animation-time ease-in-out forwards;
+                                animation: bounce-up $animation-time ease-in-out forwards; }
+                      
+            
+          } 
+
+@-webkit-keyframes bounce-down {
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@keyframes bounce-down {
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+@-webkit-keyframes slide { 
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); } }
+@keyframes slide {
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); } }
+@-webkit-keyframes bounce-up {
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+@keyframes bounce-up {
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
